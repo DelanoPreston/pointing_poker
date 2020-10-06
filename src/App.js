@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, BrowserRouter as Route, Router } from 'react-router-dom';
 import './App.css';
+// import '@eigi/bluebird';
 
-function App() {
+import Welcome from './views/Welcome';
+import Login from './views/Login';
+import Player from './views/Player';
+import Observer from './views/Observer';
+
+const App = () => {
+  this.props.history.push('/welcome');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/welcome" component={Welcome} />
+        <Route path="/login" component={Login} />
+        <Route path="/room/:room_id/player/:player_id" component={Player} />
+        <Route path="/Login/:room_id/observer" component={Observer} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
