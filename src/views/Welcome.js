@@ -1,27 +1,20 @@
 import React from "react";
-// import logo from "../logo.svg";
-import "../App.css";
 
-function App() {
+import Input from '@eigi/bluebird-ui/dist/components/Input';
+import Button from '@eigi/bluebird-ui/dist/components/Button';
+
+function Welcome() {
+  const submitName = () => {
+    // submit name that is in the input box to the webhook or something here
+  }
   return (
-    <div className="App">
-        hi there
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+    <div>
+        Hey there! Welcome to the best pointing poker ever created!
+
+        <Input placeholder="Placeholder" inputId="input-text" onChange={() => {}} />
+        <Button onClick={submitName()}>Primary</Button>
     </div>
   );
 }
 
-export default App;
+export default Welcome;
