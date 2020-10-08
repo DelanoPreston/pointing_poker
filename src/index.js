@@ -7,11 +7,11 @@ import * as serviceWorker from './serviceWorker';
 import Wrapper from '@eigi/bluebird-ui/dist/components/Wrapper';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Wrapper>
       <App />
-    </Wrapper>
-  </React.StrictMode>,
+    </Wrapper>,
+  // </React.StrictMode>,
   document.getElementById('root'),
 );
 

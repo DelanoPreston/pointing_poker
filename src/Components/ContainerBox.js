@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Container from "@eigi/bluebird-ui/dist/components/Container";
 import Column from "@eigi/bluebird-ui/dist/components/Column";
@@ -15,19 +14,15 @@ function Welcome() {
   return (
     <Grid xsJustify="center" xs={3} mt="sm">
       <Column xsStart={2}>
-        <Container align="center">
+        <Container>
           <Text type="h1" position="center">
             Hey there! Welcome to the best pointing poker ever created!
           </Text>
           <Text type="p" position="center">
             What do you want to do?
           </Text>
-          <Link className="Center" to="/create">
-            <Button onClick={goToOtherPlace()}>Start a session</Button>
-          </Link>
-          <Link className="Center" to="/login">
-            <Button onClick={goToOtherPlace()}>Join a session</Button>
-          </Link>
+          <Button onClick={goToOtherPlace()}>Start a session</Button>
+          <Button onClick={goToOtherPlace()}>Join a session</Button>
         </Container>
       </Column>
     </Grid>
