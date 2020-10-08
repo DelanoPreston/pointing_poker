@@ -8,13 +8,12 @@ import Grid from "@eigi/bluebird-ui/dist/components/Grid";
 import Column from "@eigi/bluebird-ui/dist/components/Column";
 import Container from "@eigi/bluebird-ui/dist/components/Container";
 
-import "../styles/Welcome.scss";
 import "../styles/Common.scss";
 
 function CreateRoom() {
-//   const standardArray = [1, 2, 3, 5, 8, 13, 21];
+  //   const standardArray = [1, 2, 3, 5, 8, 13, 21];
   const [roomName, setroomName] = useState("");
-//   const [pointArray, setPointArray] = useState(standardArray);
+  //   const [pointArray, setPointArray] = useState(standardArray);
   const submitName = () => {
     // submit name that is in the input box to the webhook or something here
   };
@@ -25,8 +24,8 @@ function CreateRoom() {
     return false;
   };
   return (
-    <Grid xs={3} mt="sm">
-      <Column xsStart={2}>
+    <Grid xsJustify="center" xs={1} sm={5} lg={7} mt="sm">
+      <Column xsStart={1} smStart={2} smSpan={3} lgStart={3} lgSpan={3}>
         <Container>
           <Text type="h3" position="center">
             Please enter the name you wish to room to be called.
@@ -43,7 +42,11 @@ function CreateRoom() {
               <Button onClick={submitName()}>Join</Button>
             </Link>
           )}
-          {!hasInputData() && <div><Button disabled>Join</Button></div>}
+          {!hasInputData() && (
+            <div>
+              <Button disabled>Join</Button>
+            </div>
+          )}
         </Container>
       </Column>
     </Grid>

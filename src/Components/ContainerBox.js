@@ -6,7 +6,6 @@ import Button from "@eigi/bluebird-ui/dist/components/Button";
 import Text from "@eigi/bluebird-ui/dist/components/Text";
 import Grid from "@eigi/bluebird-ui/dist/components/Grid";
 
-import "../styles/Welcome.scss";
 import "../styles/Common.scss";
 
 function Welcome() {
